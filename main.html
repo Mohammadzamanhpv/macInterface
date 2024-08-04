@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacOs Sonoma</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #display {
+            padding-top: 30px;
+            width: 1440px;
+            height: 707px;
+            background: url(./img/darkBackground.jpg) no-repeat;
+            background-size: 1440px 737px;
+            background-position: 0;
+        }
+
+        #display>#dock {
+            width: 825px;
+            height: 75px;
+            border: 1px solid rgba(184, 177, 177, 0.5);
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            position: absolute;
+            top: 655px;
+            left: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .rightClick {
+            width: 150px;
+            height: 160px;
+            visibility: hidden;
+            position: absolute;
+            color: #fff;
+            background-color: rgb(60, 76, 98);
+            padding: 4px 5px
+        }
+
+        .subMenu {
+            background-color: rgb(60, 76, 98);
+            padding: 4px 5px
+        }
+
+        ol {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        ol>li {
+            padding: 3px 6px 3px 6px;
+            /* position: relative; */
+            border-radius: 5px;
+            padding-left: 20px;
+        }
+
+        ol>li:hover {
+            background-color: rgb(43, 87, 184);
+            padding: 3px 6px 3px 6px;
+            padding-left: 20px;
+
+        }
+
+        ol>li>ol {
+            position: absolute;
+            /* transition: 0.5s; */
+            opacity: 0;
+            visibility: hidden;
+            top: 10px;
+            left: 150px;
+
+        }
+
+        ol>li:hover>ol {
+            opacity: 1;
+            visibility: visible;
+            /* padding-left: 20px; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="ctrlCenter">
+            <div class="headbox left">
+                <div class="logo">
+                    <button>
+                        <img src="./img/apple.png" alt="">
+                        <div>
+                            <ul>
+                                <li>About This Mac</li>
+                                <hr>
+                                <li>System Settings</li>
+                                <li>App store</li>
+                                <hr>
+                                <li>Recent Items</li>
+                                <hr>
+                                <li>Force Quite</li>
+                                <hr>
+                                <li>Sleep</li>
+                                <li>Restart</li>
+                                <li>Shut Down</li>
+                                <hr>
+                                <li>Lock Screen</li>
+                                <li>Log Out Mac Book</li>
+                            </ul>
+                        </div>
+                    </button>
+                </div>
+                <div class="appOption">
+                    <button>
+                        Finder
+                        <div>
+                            <ul>
+                                <li>App store</li>
+                                <hr>
+                                <li>Recent Items</li>
+                                <hr>
+                                <li>Force Quite</li>
+                                <hr>
+                                <li>Sleep</li>
+                                <li>Restart</li>
+                                <li>Shut Down</li>
+                            </ul>
+                        </div>
+                    </button>
+                    <button>
+                        File
+                        <div>
+                            <ul>
+                                <li>New Finder</li>
+                                <li>New Folder</li>
+                                <li>New Tab</li>
+                                <li>Open</li>
+                                <li>Open With</li>
+                                <hr>
+                                <li>Get Info</li>
+                                <li>Rename</li>
+                                <li>Print</li>
+                                <li>Quick Look</li>
+                                <hr>
+                                <li>Share</li>
+                                <hr>
+                                <li>Move to Trash</li>
+                            </ul>
+                        </div>
+
+                    </button>
+                    <button>
+                        Edit
+                        <div>
+                            <ul>
+                                <li>Undo</li>
+                                <li>redo</li>
+                                <hr>
+                                <li>Cut</li>
+                                <li>Copy</li>
+                                <li>Paste</li>
+                                <hr>
+                                <li>Find</li>
+                                <li>Replace</li>
+                                <hr>
+                                <li>Show ClipBoard</li>
+
+                            </ul>
+                        </div>
+
+                    </button>
+                    <button>
+                        View
+                        <div>
+                            <ul>
+                                <li>as Icons</li>
+                                <li>as List</li>
+                                <li>as Columns</li>
+                                <li>as Gallery</li>
+                                <hr>
+                                <li>Show Tab Bar</li>
+                                <li>Show All Tabs</li>
+                                <hr>
+                                <li>Hide Toolbar</li>
+                                <hr>
+                                <li>Enter Full Screen</li>
+                            </ul>
+                        </div>
+
+                    </button>
+                    <button>
+                        GO
+                        <div>
+                            <ul>
+                                <li>Back</li>
+                                <hr>
+                                <li>Connect to Server</li>
+                            </ul>
+                        </div>
+
+                    </button>
+                    <button>
+                        Window
+                        <div>
+                            <ul>
+                                <li>Minimize</li>
+                                <hr>
+                                <li>Full Screen</li>
+                            </ul>
+                        </div>
+
+                    </button>
+                    <button>
+                        Help
+                        <div>
+                            <ul>
+                                <li>Tips For Your Mac</li>
+                                <hr>
+                                <li>MacOs Help</li>
+                            </ul>
+                        </div>
+
+                    </button>
+                </div>
+            </div>
+            <div class="headbox right">
+                <div class="sysTray">
+                    <button>
+                        <img src="./img/Shortcuts.png" alt="">
+                        <div>
+                            <!--  -->
+                        </div>
+                    </button>
+                    <button>
+                        <img src="./img/Battery.png" alt="">
+                        <div>
+                            <!--  -->
+                        </div>
+                    </button>
+                    <button>
+                        <img src="./img/Spotlight.png" alt="">
+                        <div>
+                            <!--  -->
+                        </div>
+                    </button>
+                    <button>
+                        <img src="./img/WiFi.png" alt="">
+                        <div>
+                            <!--  -->
+                        </div>
+                    </button>
+                    <button>
+                        <img src="./img/ctrlcenter.png" alt="">
+                        <div>
+                            <!--  -->
+                        </div>
+                    </button>
+                    <button>
+                        <img src="./img/Siri.png" alt="">
+                    </button>
+                </div>
+                <div class="clock">
+                    <span>Mordad 11</span>
+                    <span>12:51 AM</span>
+                </div>
+                <!-- <div class="appTray">                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <div id="display">
+        <ol class="rightClick">
+            <li>New Folder</li>
+            <hr>
+            <li>Get Info</li>
+            <li>Change Wallpaper</li>
+            <li>Edit Widgets</li>
+            <hr>
+            <li>Use Stacks</li>
+            <li>Group Stacks By &gt
+                <ol class="subMenu">
+                    <li>Kind</li>
+                    <li>Date Added</li>
+                    <li>Date Modified</li>
+                    <li>Date Opened</li>
+                    <li>Date Created</li>
+                    <li>Taged</li>
+                </ol>
+            </li>
+            <li>Show view Options</li>
+        </ol>
+
+        <div id="dock">
+            <button>
+                <img src="./img/Finder.svg" alt="">
+            </button>
+            <button>
+                <img src="./img/Launchpad.svg" alt="">
+            </button>
+            <button>
+                <img src="./img/setting.svg" alt="">
+            </button>
+            <button>
+                <img src="./img/AppStore.svg" alt="">
+            </button>
+            <button>
+                <a href="../chromeInterface/main.html">
+                    <img src="./img/Google_Chrome.svg" alt="" style="width: 48px; height: 48px;">
+                </a>
+            </button>
+            <button>
+                <img src="./img/Safari.svg">
+            </button>
+            <button>
+                <img src="./img/telegram_icon.png" alt="" style="width: 48px; height: 48px;">
+            </button>
+            <button>
+                <img src="./img/Firefox_logo.svg" alt="" style="width: 48px; height: 48px;">
+            </button>
+            <button>
+                <img src="./img/FolderIcon.svg" alt="">
+            </button>
+            <button>
+                <img src="./img/trash.svg" alt="">
+            </button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
