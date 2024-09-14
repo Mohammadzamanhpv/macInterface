@@ -32,9 +32,9 @@ button:hover>div {
     opacity: 1;
 }
 
-button>div {
-    /* display: none; */
-}
+/* button>div {
+ display: none; 
+} */
 
 li,
 ul,
